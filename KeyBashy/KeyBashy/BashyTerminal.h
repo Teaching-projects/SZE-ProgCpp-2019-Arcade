@@ -1,16 +1,21 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Animation.h"
+#include "Collider.h"
 
 class BashyTerminal
 {
 
 public:
-	BashyTerminal(sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime,float speed);
+	BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime,float speed);
 	
 
 	void Draw(sf::RenderWindow& window);
 	void Update(float uTime);
+
+	Collider GetCollider() { return Collider(body); }
+
+	sf::RectangleShape GetBody() { return this->body; };
 
 private:
 

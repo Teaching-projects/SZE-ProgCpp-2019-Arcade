@@ -2,6 +2,7 @@
 #include "BashyTerminal.h"
 #include <iostream>
 #include "Enemy1.h"
+#include "Collider.h"
 
 int main()
 {
@@ -18,9 +19,9 @@ int main()
 	
 	terminalTexture.loadFromFile("SpriteSheets/terminal.png");
 
-	BashyTerminal Bashy(&terminalTexture,sf::Vector2u(2,1),0.30f,700.0f); //tesztek animáció / mozgás kurzorokkal
+	BashyTerminal Bashy(window,&terminalTexture,sf::Vector2u(2,1),0.30f,700.0f); //tesztek animáció / mozgás kurzorokkal
 
-	Enemy1 enemy1(&enemy1Texture,sf::Vector2u(2,1),0.30f,700.0f);
+	Enemy1 enemy1(&enemy1Texture,sf::Vector2u(2,1),0.30f,300.0f);
 
 	float deltaTime = 0.0f;
 	sf::Clock clock;
@@ -40,9 +41,11 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-		 
+		
 		Bashy.Update(deltaTime);
-		enemy1.Update(deltaTime);
+		enemy1.Update(deltaTime,Bashy.GetBody());
+		//update utan kell ütközest nezni!
+		Bashy.GetCollider().CheckCollision(enemy1.GetCollider()); //kire csekkoljam a collidert az enemyre or mindig a fõhõsre hmmm
 		// screen törlése mielott kirajzolom az újakat
 		window.clear();
 		

@@ -21,12 +21,14 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="BashyTerminal.cpp" />
+    <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="BashyTerminal.h" />
+    <ClInclude Include="Collider.h" />
     <ClInclude Include="Enemy1.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

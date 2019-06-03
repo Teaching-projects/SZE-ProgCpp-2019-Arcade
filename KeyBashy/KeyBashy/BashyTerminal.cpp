@@ -1,13 +1,13 @@
 #include "BashyTerminal.h"
 
-	BashyTerminal::BashyTerminal(sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime, float speed) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
+	BashyTerminal::BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime, float speed) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
 
 		this->speed = speed;
 		row = 0;
 
 		body.setSize(sf::Vector2f(73.0f,47.0f));
 
-		body.setPosition(0.0f,0.0f);
+		body.setPosition(sf::VideoMode::getDesktopMode().width * 0.5, sf::VideoMode::getDesktopMode().height * 0.5); //középre állítja remélhetõleg minden gépen tesztelni
 
 		body.setTexture(terminalTexture);
 
@@ -19,7 +19,7 @@
 	
 	}
 
-	void BashyTerminal::Update(float deltaTime) {
+	void BashyTerminal::Update(float deltaTime) { // sima eazy controll semmi extra
 		
 		sf::Vector2f movement(0.0f,0.0f);
 
