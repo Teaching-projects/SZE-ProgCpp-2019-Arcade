@@ -11,7 +11,7 @@ public:
 	
 
 	void Draw(sf::RenderWindow& window);
-	void Update(float uTime);
+	void Update(float uTime,bool GameOver,sf::RenderWindow& window);
 
 	Collider GetCollider() { return Collider(body); }
 

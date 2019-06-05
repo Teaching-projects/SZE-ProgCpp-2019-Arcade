@@ -9,7 +9,7 @@ Collider::Collider(sf::RectangleShape& body)
 
 }
 
-bool Collider::CheckCollision(Collider other) //Téglalapok összehasonlitasa
+bool Collider::CheckCollision(Collider other, float push) //Téglalapok összehasonlitasa
 {
 
 	sf::Vector2f otherPosition = other.GetPosition();
@@ -25,8 +25,38 @@ bool Collider::CheckCollision(Collider other) //Téglalapok összehasonlitasa
 
 	if (intersectX < 0.0f && intersectY < 0.0f) { //egymásba van a két object , gg end
 
-		system("CLS");
-		std::cout << "GAME OVER";
+		push = std::min(std::max(push, 0.0f), 1.0f);
+
+		if (intersectX > intersectY)
+		{
+
+			if (deltaX > 0.0f) {
+			
+				Move(intersectX * (1.0f - push), 0.0f);
+				other.Move(-intersectX* push, 0.0f);
+
+			}
+			else {
+			
+
+				Move(-intersectX * (1.0f - push), 0.0f);
+				other.Move(intersectX * push, 0.0f);
+			
+			}
+			if (deltaY > 0.0f) {
+
+				Move(intersectY * (1.0f - push), 0.0f);
+				other.Move(-intersectY * push, 0.0f);
+
+			}
+			else {
+
+
+				Move(0.0f,-intersectY * (1.0f - push));
+				other.Move(0.0f, intersectY * push);
+			}
+
+		}
 
 		return true;
 	}

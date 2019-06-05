@@ -6,10 +6,10 @@
 class Enemy1
 {
 	public:
-		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float switchTime, float speed);
+		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float switchTime, float speed, float x, float y);
 
 		void Draw(sf::RenderWindow& window);
-		void Update(float uTime, sf::RectangleShape Bashybody);
+		void Update(float uTime, sf::RectangleShape Bashybody,bool GameOver);
 
 		Collider GetCollider() { return Collider(body); }
 

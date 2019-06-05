@@ -19,18 +19,20 @@
 	
 	}
 
-	void BashyTerminal::Update(float deltaTime) { // sima eazy controll semmi extra
+	void BashyTerminal::Update(float deltaTime,bool GameOver, sf::RenderWindow& window) { // sima eazy controll semmi extra
 		
 		sf::Vector2f movement(0.0f,0.0f);
 
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
-			movement.y -= speed*deltaTime;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-			movement.y += speed * deltaTime;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-			movement.x -= speed * deltaTime;
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
-			movement.x += speed * deltaTime;
+		if (!GameOver) {
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up) && body.getPosition().y > 0)
+				movement.y -= speed * deltaTime;
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down) && body.getPosition().y < window.getSize().y-75)
+				movement.y += speed * deltaTime;
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) && body.getPosition().x > 0)
+				movement.x -= speed * deltaTime;
+			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && body.getPosition().x < window.getSize().x-75)
+				movement.x += speed * deltaTime;
+		}
 		animation.Update(row,deltaTime);
 		body.setTextureRect(animation.uvRect);
 		body.move(movement);
