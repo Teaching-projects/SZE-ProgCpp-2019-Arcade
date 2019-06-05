@@ -1,19 +1,20 @@
 #include "Enemy1.h"
 
-Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float switchTime, float speed, float x, float y) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
-
+Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float switchTime, float speed, float x, float y, sf::Font& font) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
+	
+	
 	this->speed = speed;
 	row = 0;
 	left = false;
 	body.setSize(sf::Vector2f(73.0f, 55.0f));
 	body.setOrigin(body.getSize()/2.0f);
+	srand(time(NULL));
+	asd = rand() % 25 + 1;
+	asd += 65;
 	body.setPosition(x,y);
-
 	body.setTexture(terminalTexture);
-
-	font.loadFromFile("arial.ttf");
 	text.setFont(font);
-	text.setString("asdsafdsf");
+	text.setString(asd);
 	text.setFillColor(sf::Color::White);
 	text.setCharacterSize(25);
 	text.setPosition(body.getPosition());

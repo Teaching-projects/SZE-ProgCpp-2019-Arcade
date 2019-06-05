@@ -1,2 +1,10 @@
 ﻿  main.cpp
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(31,46): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(31,46): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(31,46): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(31,46): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(31,46): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(77,23): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(94,21): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(115,21): warning C4018:  '<': signed/unsigned mismatch
   KeyBashy.vcxproj -> C:\KeyBashy\KeyBashy\Debug\KeyBashy.exe
