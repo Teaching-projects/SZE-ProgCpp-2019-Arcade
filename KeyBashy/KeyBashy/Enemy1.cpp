@@ -1,16 +1,18 @@
 #include "Enemy1.h"
 
-Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float switchTime, float speed, float x, float y, sf::Font& font) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
-	
+Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,  float x, float y, sf::Font& font) : animation(terminalTexture, imageCount) {//inicializálás list 
 	
 	this->speed = speed;
 	row = 0;
 	left = false;
 	body.setSize(sf::Vector2f(73.0f, 55.0f));
 	body.setOrigin(body.getSize()/2.0f);
-	srand(time(NULL));
+	state = Alive;
 	asd = rand() % 25 + 1;
-	asd += 65;
+	asd += 97;
+
+	this->speed = ((rand() % 70) + 1) + 250;
+
 	body.setPosition(x,y);
 	body.setTexture(terminalTexture);
 	text.setFont(font);
@@ -40,7 +42,17 @@ void Enemy1::Update(float deltaTime, sf::RectangleShape Bashybody,bool GameOver)
 		else
 			movement.y += (speed * deltaTime);
 	}
-	animation.Update(row, deltaTime);
+
+	//melyik animáció legyen
+
+	if(state == Alive)
+		animation.Update(row, deltaTime,0.30f);
+	else if (state == Dying) {
+		row = 1;
+		animation.Update(row, deltaTime,0.60f);
+		state = Dead;
+	}
+
 	body.setTextureRect(animation.uvRect);
 	body.move(movement);
 	text.setPosition(body.getPosition().x-7,body.getPosition().y+45);

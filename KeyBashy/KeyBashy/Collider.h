@@ -7,7 +7,7 @@ public:
 
 	Collider(sf::RectangleShape& body); //
 	
-	bool CheckCollision(Collider other, float push);
+	bool CheckCollision(Collider other);
 
 	sf::Vector2f GetPosition() { return body.getPosition(); }
 	sf::Vector2f GetHalfSize() { return body.getSize()/2.0f; }

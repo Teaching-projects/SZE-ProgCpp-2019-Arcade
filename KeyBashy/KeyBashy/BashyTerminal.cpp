@@ -1,6 +1,6 @@
 #include "BashyTerminal.h"
 
-	BashyTerminal::BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime, float speed) : animation(terminalTexture, imageCount, switchTime) {//inicializálás list 
+	BashyTerminal::BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount, float speed) : animation(terminalTexture, imageCount) {//inicializálás list 
 
 		this->speed = speed;
 		row = 0;
@@ -33,7 +33,7 @@
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right) && body.getPosition().x < window.getSize().x-75)
 				movement.x += speed * deltaTime;
 		}
-		animation.Update(row,deltaTime);
+		animation.Update(row,deltaTime,0.30f);
 		body.setTextureRect(animation.uvRect);
 		body.move(movement);
 	}

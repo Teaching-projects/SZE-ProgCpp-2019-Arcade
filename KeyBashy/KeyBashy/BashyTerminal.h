@@ -7,7 +7,7 @@ class BashyTerminal
 {
 
 public:
-	BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount, float switchTime,float speed);
+	BashyTerminal(sf::RenderWindow& window,sf::Texture *terminalTexture,sf::Vector2u imageCount,float speed);
 	
 
 	void Draw(sf::RenderWindow& window);
