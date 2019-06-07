@@ -5,10 +5,10 @@
 		this->speed = speed;
 		row = 0;
 
-		body.setSize(sf::Vector2f(73.0f,47.0f));
+		body.setSize(sf::Vector2f(55.0f,29.0f));
 
 		body.setPosition(sf::VideoMode::getDesktopMode().width * 0.5, sf::VideoMode::getDesktopMode().height * 0.5); //középre állítja remélhetõleg minden gépen tesztelni
-
+		body.setOrigin(body.getSize() / 2.0f);
 		body.setTexture(terminalTexture);
 
 	}

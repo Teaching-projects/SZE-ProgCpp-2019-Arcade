@@ -1,3 +1,17 @@
 ﻿  Enemy1.cpp
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(14,36): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(11,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(17,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(25,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(32,36): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(22,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(89,24): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(102,24): warning C4018:  '<': signed/unsigned mismatch
+  Generating Code...
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(170,22): warning C4018:  '<': signed/unsigned mismatch
   KeyBashy.vcxproj -> C:\KeyBashy\KeyBashy\Debug\KeyBashy.exe

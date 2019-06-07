@@ -14,7 +14,9 @@ enum State
 class Enemy1
 {
 	public:
-		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, float y, sf::Font& font);
+		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& font);
+
+		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,float x,float y, float speed,sf::Font& font);
 
 		void Draw(sf::RenderWindow& window);
 		void Update(float uTime, sf::RectangleShape Bashybody,bool GameOver);
@@ -25,8 +27,11 @@ public:
 
 	sf::Text text;
 	State state;
-	private:
-
+	
+private:
+		
+		float x = 0.0f;
+		float y = 0.0f;
 		bool left;
 		char asd;
 		sf::RectangleShape body;

@@ -5,8 +5,6 @@ Collider::Collider(sf::RectangleShape& body)
 	:body(body)
 {
 
-
-
 }
 
 bool Collider::CheckCollision(Collider other) //Téglalapok összehasonlitasa
@@ -23,7 +21,7 @@ bool Collider::CheckCollision(Collider other) //Téglalapok összehasonlitasa
 	float intersectX = abs(deltaX) - (otherHalfSize.x + thisHalfSize.x);
 	float intersectY = abs(deltaY) - (otherHalfSize.y + thisHalfSize.y);
 
-	if (intersectX < 0.0f && intersectY < 0.0f) { //egymásba van a két object , gg end
+	if (intersectX < -8.0f && intersectY < -8.0f) { //egymásba van a két object , gg end
 
 		//push = std::min(std::max(push, 0.0f), 1.0f);
 
