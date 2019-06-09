@@ -28,7 +28,7 @@ int main()
 			
 		case 1:
 
-			state = play.loadStage(0,window);
+			state = play.loadStage(1,window);
 			break;
 			
 

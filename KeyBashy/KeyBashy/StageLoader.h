@@ -5,16 +5,16 @@
 class StageLoader
 {
 
-	StageLoader(int stageNum);
+	
 
 public:
-
+	StageLoader();
 	int loadStage(int stageNum, sf::RenderWindow& window);
 
 private:
 
-	TestStage* tStage;
 	int stageNum;
+	TestStage tStage;
 
 };
 

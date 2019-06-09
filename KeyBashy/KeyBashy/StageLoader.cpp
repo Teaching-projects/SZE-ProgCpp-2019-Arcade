@@ -1,24 +1,21 @@
 #include "StageLoader.h"
 
-StageLoader::StageLoader(int stageNum) {
-
-	this->stageNum = stageNum;
+StageLoader::StageLoader() {
 	
 }
 
 int StageLoader::loadStage(int stageNum, sf::RenderWindow& window) {
 
-	switch (stageNum) {
-	
-	case 0:
-		if (tStage != NULL) {
-			delete tStage;
-			tStage = new TestStage();
-		}
-		tStage = new TestStage();
-		tStage->Start(window);
-		break;
-	}
+	while (stageNum != 0) {
+		switch (stageNum) {
 
-	return 1;
+		case 0:
+			return 0;
+			break;
+
+		case 1:
+			stageNum = tStage.Start(window);
+			break;
+		}
+	}
 }

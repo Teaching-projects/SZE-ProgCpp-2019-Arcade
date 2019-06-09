@@ -23,14 +23,19 @@ TestStage::TestStage() {
 	enemy1Texture.loadFromFile("SpriteSheets/enemy1.png"); //  spritesheetek betöltése
 	terminalTexture.loadFromFile("SpriteSheets/terminal.png"); //
 
-	enemy1List.push_back(new Enemy1(&enemy1Texture, sf::Vector2u(2, 2), font));
+	
 	//enemy1List.push_back(new Enemy1(&enemy1Texture, sf::Vector2u(2, 2),0.0f,0.0f,150.0f,font));
 
 }
 
 int TestStage::Start(sf::RenderWindow& window) {
 
-	playerText.setPosition(0, window.getSize().y - 30); //Text input format
+	GameOver = false;
+	playerText.setPosition(0, window.getSize().y - 30);
+	enemy1List.clear();
+	window.clear();
+	playerText.setString("");
+	 //Text input format
 	BashyTerminal Bashy(window, &terminalTexture, sf::Vector2u(2, 1), 600.0f); //hero
 
 	while (window.isOpen())
