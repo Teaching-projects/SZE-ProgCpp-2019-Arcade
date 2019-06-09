@@ -1,21 +1,21 @@
-#include "Enemy1.h"
+#include "Enemy2.h"
 
-Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& font) : animation(terminalTexture, imageCount) {//inicializálás list 
-	//random elhelyezésnek új konstruktor...
+Enemy2::Enemy2(sf::Texture* terminalTexture, sf::Vector2u imageCount, sf::Font& font) : animation(terminalTexture, imageCount) {//inicializálás list 
+
 	this->speed = speed;
 	row = 0;
 	left = false;
 	body.setSize(sf::Vector2f(60.0f, 42.0f));
-	body.setOrigin(body.getSize()/2.0f);
+	body.setOrigin(body.getSize() / 2.0f);
 
 	x = rand() % 2 + 1;
 
 	if (x == 1) {
-		
+
 		x = 100;
 
 		y = rand() % 1000 + 1;
-	
+
 	}
 	else
 	{
@@ -28,10 +28,10 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& f
 	state = Alive;
 	asd = rand() % 25 + 1;
 	asd += 97;
-	
+
 	this->speed = ((rand() % 70) + 1) + 300;
 
-	body.setPosition(x,y);
+	body.setPosition(x, y);
 	body.setTexture(terminalTexture);
 	text.setFont(font);
 	text.setString(asd);
@@ -40,7 +40,7 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& f
 	text.setPosition(body.getPosition());
 }
 
-Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, float y, float speed ,sf::Font& font) : animation(terminalTexture, imageCount)
+Enemy2::Enemy2(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, float x, float y, float speed, sf::Font& font) : animation(Enemy2Texture, imageCount)
 {
 
 	this->x = x;
@@ -58,7 +58,7 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, f
 	this->speed = speed;
 
 	body.setPosition(x, y);
-	body.setTexture(terminalTexture);
+	body.setTexture(Enemy2Texture);
 	text.setFont(font);
 	text.setString(asd);
 	text.setFillColor(sf::Color::White);
@@ -67,15 +67,15 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, f
 
 }
 
-void Enemy1::Draw(sf::RenderWindow& window) {
+void Enemy2::Draw(sf::RenderWindow& window) {
 
 	window.draw(body);
 	window.draw(text);
-	
+
 }
 
-void Enemy1::Update(float deltaTime, sf::RectangleShape Bashybody,bool GameOver) {
-	
+void Enemy2::Update(float deltaTime, sf::RectangleShape Bashybody, bool GameOver) {
+
 	sf::Vector2f movement(0.0f, 0.0f);
 
 	if (!GameOver && state == Alive) {
@@ -96,14 +96,14 @@ void Enemy1::Update(float deltaTime, sf::RectangleShape Bashybody,bool GameOver)
 		body.setTextureRect(animation.uvRect);
 		body.move(movement);
 		text.setPosition(body.getPosition().x - 7, body.getPosition().y + 45);
-		
+
 	}
 	else if (state == Dying) {
-		
+
 		row = 1;
 		animation.Update(row, deltaTime, 0.30f);
 		body.setTextureRect(animation.uvRect);
-		
+
 	}
 
 }

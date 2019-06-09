@@ -1,17 +1,54 @@
-﻿  Enemy1.cpp
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(11,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(17,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(25,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy1.cpp(32,36): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(22,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(33,47): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(89,24): warning C4018:  '<': signed/unsigned mismatch
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(102,24): warning C4018:  '<': signed/unsigned mismatch
+﻿  main.cpp
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(18,14): error C2512:  'StageLoader': no appropriate default constructor available
+C:\KeyBashy\KeyBashy\KeyBashy\StageLoader.h(5,7): message :  see declaration of 'StageLoader'
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(19,25): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  StageLoader.cpp
+  StageTest.cpp
+C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(19,12): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(9,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(33,47): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(33,47): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(33,47): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(33,47): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(33,47): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         and
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:             T=float
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,95): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         and
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:             T=float
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(57,61): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         and
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:             T=float
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,96): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         with
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:             T=unsigned int
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         and
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         [
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:             T=float
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(63,62): warning C4244:         ]
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(81,24): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(94,24): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(124,24): warning C4018:  '<': signed/unsigned mismatch
   Generating Code...
-C:\KeyBashy\KeyBashy\KeyBashy\main.cpp(170,22): warning C4018:  '<': signed/unsigned mismatch
-  KeyBashy.vcxproj -> C:\KeyBashy\KeyBashy\Debug\KeyBashy.exe
+C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(189,21): warning C4018:  '<': signed/unsigned mismatch
