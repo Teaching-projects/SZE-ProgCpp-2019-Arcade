@@ -21,6 +21,7 @@
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="BashyTerminal.cpp" />
+    <ClCompile Include="BasicEnemy.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="Enemy2.cpp" />
@@ -33,6 +34,7 @@
   <ItemGroup>
     <ClInclude Include="Animation.h" />
     <ClInclude Include="BashyTerminal.h" />
+    <ClInclude Include="BasicEnemy.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Enemy1.h" />
     <ClInclude Include="Enemy2.h" />

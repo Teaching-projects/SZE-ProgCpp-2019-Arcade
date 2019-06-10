@@ -3,32 +3,26 @@
 #include "Animation.h"
 #include "Collider.h"
 #include <stdlib.h>
+#include "BasicEnemy.h"
 
-enum State
-{
-	Alive,
-	Dying,
-	Dead
-};
 
-class Enemy2
+class Enemy2 : public BasicEnemy
 {
 
 	
 	public:
+		virtual ~Enemy2() = default;
+
 		Enemy2(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, sf::Font& font);
 
 		Enemy2(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, float x, float y, float speed, sf::Font& font);
 
-		void Draw(sf::RenderWindow& window);
 		void Update(float uTime, sf::RectangleShape Bashybody, bool GameOver);
 
 		Collider GetCollider() { return Collider(body); }
 
 	public:
 
-		sf::Text text;
-		State state;
 
 	private:
 
@@ -36,7 +30,7 @@ class Enemy2
 		float y = 0.0f;
 		bool left;
 		char asd;
-		sf::RectangleShape body;
+		//sf::RectangleShape body;
 		float speed;
 		std::string health;
 		unsigned int row;

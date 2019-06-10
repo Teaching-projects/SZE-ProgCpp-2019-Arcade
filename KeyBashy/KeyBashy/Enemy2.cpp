@@ -1,6 +1,6 @@
 #include "Enemy2.h"
 
-Enemy2::Enemy2(sf::Texture* terminalTexture, sf::Vector2u imageCount, sf::Font& font) : animation(terminalTexture, imageCount) {//inicializálás list 
+Enemy2::Enemy2(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, sf::Font& font) : animation(Enemy2Texture, imageCount) {//inicializálás list 
 
 	this->speed = speed;
 	row = 0;
@@ -32,7 +32,7 @@ Enemy2::Enemy2(sf::Texture* terminalTexture, sf::Vector2u imageCount, sf::Font& 
 	this->speed = ((rand() % 70) + 1) + 300;
 
 	body.setPosition(x, y);
-	body.setTexture(terminalTexture);
+	body.setTexture(Enemy2Texture);
 	text.setFont(font);
 	text.setString(asd);
 	text.setFillColor(sf::Color::White);
@@ -64,13 +64,6 @@ Enemy2::Enemy2(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, float x, flo
 	text.setFillColor(sf::Color::White);
 	text.setCharacterSize(25);
 	text.setPosition(body.getPosition());
-
-}
-
-void Enemy2::Draw(sf::RenderWindow& window) {
-
-	window.draw(body);
-	window.draw(text);
 
 }
 

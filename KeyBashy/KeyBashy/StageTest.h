@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "BashyTerminal.h"
-#include "Enemy1.h"
+#include "BasicEnemy.h"
 
 class TestStage
 {
@@ -20,10 +20,11 @@ private:
 	sf::Font font;			//
 	sf::Text GameOvertext2;
 
-	std::vector <Enemy1*> enemy1List; //az enemy1 - k containere
+	std::vector <BasicEnemy*> enemy1List; //az enemy1 - k containere
 
 	sf::Texture terminalTexture;					// Spritesheetek
 	sf::Texture enemy1Texture;						//
+	sf::Texture enemy2Texture;
 
 	int selected;
 

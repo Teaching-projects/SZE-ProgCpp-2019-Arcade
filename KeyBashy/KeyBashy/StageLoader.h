@@ -4,9 +4,6 @@
 
 class StageLoader
 {
-
-	
-
 public:
 	StageLoader();
 	int loadStage(int stageNum, sf::RenderWindow& window);

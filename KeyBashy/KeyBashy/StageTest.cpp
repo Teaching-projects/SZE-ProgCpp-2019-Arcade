@@ -1,4 +1,7 @@
 #include "StageTest.h"
+#include "Enemy1.h"
+#include "Enemy2.h"
+#include "BasicEnemy.h"
 
 TestStage::TestStage() {
 
@@ -22,7 +25,7 @@ TestStage::TestStage() {
 							
 	enemy1Texture.loadFromFile("SpriteSheets/enemy1.png"); //  spritesheetek betöltése
 	terminalTexture.loadFromFile("SpriteSheets/terminal.png"); //
-
+	enemy2Texture.loadFromFile("SpriteSheets/enemy2.png");
 	
 	//enemy1List.push_back(new Enemy1(&enemy1Texture, sf::Vector2u(2, 2),0.0f,0.0f,150.0f,font));
 
@@ -30,11 +33,13 @@ TestStage::TestStage() {
 
 int TestStage::Start(sf::RenderWindow& window) {
 
+	int randomNum;
 	GameOver = false;
 	playerText.setPosition(0, window.getSize().y - 30);
 	enemy1List.clear();
 	window.clear();
 	playerText.setString("");
+	
 	 //Text input format
 	BashyTerminal Bashy(window, &terminalTexture, sf::Vector2u(2, 1), 600.0f); //hero
 
@@ -46,7 +51,13 @@ int TestStage::Start(sf::RenderWindow& window) {
 
 			if (spawnTimeLimit >= 0.5) {
 
-				enemy1List.push_back(new Enemy1(&enemy1Texture, sf::Vector2u(2, 2), font));
+
+				randomNum = rand() % 2 + 1;
+
+				if(randomNum == 1)
+					enemy1List.push_back(new Enemy1(&enemy1Texture, sf::Vector2u(2, 2), font));
+				else
+					enemy1List.push_back(new Enemy2(&enemy2Texture, sf::Vector2u(2, 2), font));
 
 				spawnClock.restart();
 
@@ -84,7 +95,7 @@ int TestStage::Start(sf::RenderWindow& window) {
 					playerInput += event.text.unicode;
 					playerText.setString(playerInput);
 					for (int i = 0; i < enemy1List.size(); i++) {
-						if (enemy1List.at(i)->text.getString() == playerInput) {
+						if (enemy1List.at(i)->getText().getString() == playerInput) {
 							enemy1List.at(i)->state = Dying;
 							enemy1List.at(i)->Update(deltaTime, Bashy.GetBody(), GameOver);
 							//std::cout << "size: " << enemy1List.size();
@@ -97,7 +108,7 @@ int TestStage::Start(sf::RenderWindow& window) {
 				if (sf::Keyboard::isKeyPressed(sf::Keyboard::Return)) {
 
 					for (int i = 0; i < enemy1List.size(); i++) {
-						if (enemy1List.at(i)->text.getString() == playerInput) {
+						if (enemy1List.at(i)->getText().getString() == playerInput) {
 							enemy1List.at(i)->state = Dying;
 							enemy1List.at(i)->Update(deltaTime, Bashy.GetBody(), GameOver);
 							//std::cout << "size: " << enemy1List.size();

@@ -67,13 +67,6 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, f
 
 }
 
-void Enemy1::Draw(sf::RenderWindow& window) {
-
-	window.draw(body);
-	window.draw(text);
-	
-}
-
 void Enemy1::Update(float deltaTime, sf::RectangleShape Bashybody,bool GameOver) {
 	
 	sf::Vector2f movement(0.0f, 0.0f);
