@@ -19,6 +19,13 @@ int main()
 	StageLoader play;
 	Menu menu(ScreenWidth, ScreenHeight);
 
+	
+	sf::Texture terminalTexture;
+	terminalTexture.loadFromFile("SpriteSheets/terminal.png");
+	
+
+	BashyTerminal Bashy(window, &terminalTexture, sf::Vector2u(2, 1), 600.0f);
+
 	while(state != 0)
 
 		switch (state) {
@@ -29,7 +36,7 @@ int main()
 			
 		case 1:
 
-			state = play.loadStage(1,window);
+			play.loadStage(3,window,Bashy);
 			break;
 			
 

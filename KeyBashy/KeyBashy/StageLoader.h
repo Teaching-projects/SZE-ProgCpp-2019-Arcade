@@ -1,17 +1,23 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include "TutorialStage.h"
 #include "StageTest.h"
+#include "MainStage.h"
+#include "StageMenu.h"
 
 class StageLoader
 {
 public:
 	StageLoader();
-	int loadStage(int stageNum, sf::RenderWindow& window);
+	void loadStage(int stageNum, sf::RenderWindow& window, BashyTerminal& Bashy);
 
 private:
-
-	int stageNum;
-	TestStage tStage;
-
+	//sf::Texture terminalTexture;
+	
+	TutorialStage tutorStage;
+	MainStage mainstage;
+	StageMenu stagemenu;
+	//TestStage tStage;
+	
 };
 

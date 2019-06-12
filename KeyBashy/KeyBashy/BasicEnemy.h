@@ -15,7 +15,7 @@ public:
 	sf::Text text;
 	State state;
 public:
-
+	bool boss;
 	void Draw(sf::RenderWindow& window);
 
 	void virtual Update(float uTime, sf::RectangleShape Bashybody, bool GameOver) = 0;

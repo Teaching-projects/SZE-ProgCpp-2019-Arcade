@@ -17,10 +17,9 @@ public:
 
 	sf::RectangleShape GetBody() { return this->body; };
 
+	sf::RectangleShape body;
 private:
 
-	
-	sf::RectangleShape body;
 	float speed;
 	std::string health;
 	unsigned int row;

@@ -2,32 +2,35 @@
 
 Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& font) : animation(terminalTexture, imageCount) {//inicializálás list 
 	//random elhelyezésnek új konstruktor...
-	this->speed = speed;
+	
 	row = 0;
 	left = false;
 	body.setSize(sf::Vector2f(60.0f, 42.0f));
 	body.setOrigin(body.getSize()/2.0f);
 
-	x = rand() % 2 + 1;
+	x = rand() % 2300 +1;
 
-	if (x == 1) {
+	if (300<x && x<1500) {
 		
-		x = 100;
-
-		y = rand() % 1000 + 1;
-	
+		y = rand() % 1 + 1;
+		if(y == 1)
+			y = (rand() % 200 + 1)+800;
+		else
+			y = (rand() % 200 + 1);
 	}
 	else
 	{
-
-		x = 1800;
-
-		y = rand() % 1000 + 1;
+		y = rand() % 1500 + 1;
 
 	}
 	state = Alive;
-	asd = rand() % 25 + 1;
-	asd += 97;
+
+	for (size_t i = 0; i < 4; i++)
+	{
+		c = rand() % 25 + 1;
+		c += 97;
+		asd += c;
+	}
 	
 	this->speed = ((rand() % 70) + 1) + 300;
 
@@ -36,7 +39,7 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& f
 	text.setFont(font);
 	text.setString(asd);
 	text.setFillColor(sf::Color::White);
-	text.setCharacterSize(25);
+	text.setCharacterSize(40);
 	text.setPosition(body.getPosition());
 }
 
@@ -62,7 +65,7 @@ Enemy1::Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount, float x, f
 	text.setFont(font);
 	text.setString(asd);
 	text.setFillColor(sf::Color::White);
-	text.setCharacterSize(25);
+	text.setCharacterSize(40);
 	text.setPosition(body.getPosition());
 
 }

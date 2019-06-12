@@ -1,54 +1,7 @@
 ﻿  Enemy2.cpp
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(11,17): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(17,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(25,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-  StageTest.cpp
-C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(32,36): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(12,12): warning C4244:  'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(38,47): warning C4244:  'argument': conversion from 'T' to 'float', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(38,47): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(38,47): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(38,47): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(38,47): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         and
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:             T=float
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,95): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         and
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:             T=float
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(73,61): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         and
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:             T=float
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,96): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:  'argument': conversion from 'T' to 'T', possible loss of data
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         with
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:             T=unsigned int
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         and
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         [
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:             T=float
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(79,62): warning C4244:         ]
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(97,24): warning C4018:  '<': signed/unsigned mismatch
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(110,24): warning C4018:  '<': signed/unsigned mismatch
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(140,24): warning C4018:  '<': signed/unsigned mismatch
-  Generating Code...
-C:\KeyBashy\KeyBashy\KeyBashy\StageTest.cpp(205,21): warning C4018:  '<': signed/unsigned mismatch
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(43,20): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(47,18): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(49,27): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(51,22): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
+C:\KeyBashy\KeyBashy\KeyBashy\Enemy2.cpp(55,21): warning C4244:  '=': conversion from 'int' to 'float', possible loss of data
   KeyBashy.vcxproj -> C:\KeyBashy\KeyBashy\Debug\KeyBashy.exe

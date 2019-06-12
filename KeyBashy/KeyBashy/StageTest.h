@@ -8,7 +8,7 @@ class TestStage
 public:
 	TestStage();
 
-	int Start(sf::RenderWindow &window);
+	int Start(sf::RenderWindow &window, BashyTerminal& Bashy);
 
 private:
 

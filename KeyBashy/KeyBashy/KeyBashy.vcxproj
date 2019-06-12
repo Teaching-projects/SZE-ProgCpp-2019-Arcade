@@ -25,11 +25,15 @@
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="Enemy1.cpp" />
     <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Enemy3.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainStage.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Platform.cpp" />
     <ClCompile Include="StageLoader.cpp" />
+    <ClCompile Include="StageMenu.cpp" />
     <ClCompile Include="StageTest.cpp" />
+    <ClCompile Include="TutorialStage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
@@ -38,10 +42,14 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="Enemy1.h" />
     <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Enemy3.h" />
+    <ClInclude Include="MainStage.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Platform.h" />
     <ClInclude Include="StageLoader.h" />
+    <ClInclude Include="StageMenu.h" />
     <ClInclude Include="StageTest.h" />
+    <ClInclude Include="TutorialStage.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

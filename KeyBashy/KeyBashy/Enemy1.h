@@ -11,7 +11,6 @@ class Enemy1 : public BasicEnemy
 {
 	public:
 
-
 		virtual ~Enemy1() = default;
 
 		Enemy1(sf::Texture* terminalTexture, sf::Vector2u imageCount,sf::Font& font);
@@ -33,7 +32,8 @@ private:
 		float x = 0.0f;
 		float y = 0.0f;
 		bool left;
-		char asd;
+		char c;
+		std::string asd;
 		//sf::RectangleShape body;
 		float speed;
 		std::string health;
