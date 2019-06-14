@@ -31,6 +31,8 @@ public: bool GameOver;
 		sf::Texture Enemy3Texture;
 		sf::Texture BossTexture;
 
+		void printOutNintendoStyle(std::string message, int& n);
+
 	private:
 
 		sf::String playerInput; //
@@ -51,5 +53,7 @@ public: bool GameOver;
 
 		sf::Clock spawnEnemy;
 		sf::Clock clock;
+		sf::Clock messageClock;
+
 };
 

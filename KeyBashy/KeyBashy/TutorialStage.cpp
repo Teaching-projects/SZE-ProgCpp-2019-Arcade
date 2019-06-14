@@ -23,22 +23,24 @@ TutorialStage::TutorialStage() {
 	selected = 1;
 }
 
-void TutorialStage::printTextCbyC(std::string String,int& n) { //maga a sztring és hogy eddig hányat irtunk ki
+void TutorialStage::printOutNintendoStyle(std::string message, int& n) {
 
-	if (n < String.length()) {
-		sleep(35);
-		actualMessage.setString(actualMessage.getString() + String[n]);
-		n++;
-		printed = false;
-	}
-	else {
-		sleep(1500);
-		scene++;
-		actualMessage.setString("");
-		n = 0;
-		printed = true;
+	if (messageClock.getElapsedTime().asMilliseconds() > 50) {
 
+		if (n < message.length()) {
+
+			actualMessage.setString(actualMessage.getString() + message.at(n));
+			messageClock.restart();
+
+			n++;
+		}
+		else if (messageClock.getElapsedTime().asMilliseconds() > 700) {
+			actualMessage.setString("");
+			scene++;
+			n = 0;
+		}
 	}
+
 }
 
 int TutorialStage::checkEnemyList(sf::Event& event, BashyTerminal& Bashy) {
@@ -90,25 +92,13 @@ int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 
 	while (window.isOpen())
 	{
-
-		/*if (!sentence1printed)
-		{
-
-			printTextCbyC(sentence,n);
-
-		}
-		else {
-
-			enemy1List.push_back(new Enemy2(&Enemy2Texture, sf::Vector2u(2, 2),1800.0f,500.0f,200.0f,font));
-
-		}*/
 		if (GameOver != true && endStage != true) {
 
 
 			switch (scene) {
 
 			case 0:
-				printTextCbyC(sentence, n);
+				printOutNintendoStyle(sentence, n);
 				enough = false;
 				break;
 			case 1:
@@ -119,7 +109,7 @@ int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 
 				break;
 			case 2:
-				printTextCbyC("Easy right?\nHow about this?", n);
+				printOutNintendoStyle("Easy right?\nHow about this?", n);
 				enough = false;
 				break;
 			case 3:
@@ -131,13 +121,13 @@ int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 				}
 				break;
 			case 4:
-				printTextCbyC("Not bad...", n);
+				printOutNintendoStyle("Not bad...", n);
 				break;
 			
 			case 5:
 				actualMessage.setCharacterSize(70);
 				actualMessage.setFillColor(sf::Color::Red);
-				printTextCbyC("HOW ABOUT THIS?", n);
+				printOutNintendoStyle("HOW ABOUT THIS?", n);
 				enough = false;
 				break;
 			case 6:
@@ -156,17 +146,17 @@ int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 					delete enemy1List.at(i);
 					enemy1List.erase(enemy1List.begin() + i);
 				}
-				printTextCbyC("HEHE...\nDon't worry, just kidding.\nYou can either dodge or kill them.", n);
+				printOutNintendoStyle("HEHE...\nDon't worry, just kidding.\nYou can either dodge or kill them.", n);
 				enough = false;
 				break;
 
 			case 8:
-				printTextCbyC("<--WATCH OUT FOR THINGS LIKE THIS", n);
+				printOutNintendoStyle("<--WATCH OUT FOR THINGS LIKE THIS", n);
 				break;
 			case 9:
 				
 				if (!enough) {
-					enemy3List.push_back(new Enemy3(&Enemy3Texture, sf::Vector2u(1, 1), Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1250.0f));
+					enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1250.0f));
 					enough = true;
 				}
 				break;

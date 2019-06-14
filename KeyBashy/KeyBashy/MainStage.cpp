@@ -44,22 +44,24 @@ MainStage::MainStage() {
 	selected = 1;
 }
 
-void MainStage::printTextCbyC(std::string String, int& n) { //maga a sztring és hogy eddig hányat irtunk ki
+void MainStage::printOutNintendoStyle(std::string message,int& n) {
 
-	if (n < String.length()) {
-		sleep(35);
-		actualMessage.setString(actualMessage.getString() + String[n]);
-		n++;
-		printed = false;
-	}
-	else {
-		sleep(1500);
-		scene++;
-		actualMessage.setString("");
-		n = 0;
-		printed = true;
+	if (messageClock.getElapsedTime().asMilliseconds() > 50) {
 
+		if (n < message.length()) {
+			
+			actualMessage.setString(actualMessage.getString()+message.at(n));
+			messageClock.restart();
+
+			n++;
+		}
+		else if(messageClock.getElapsedTime().asMilliseconds() > 700){
+			actualMessage.setString("");
+			scene++;
+			n = 0;
+		}
 	}
+
 }
 
 int MainStage::checkEnemyList(sf::Event& event, BashyTerminal& Bashy) {
@@ -94,7 +96,7 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 
 	
 
-	scene = 3;
+	scene = 0;
 
 	int n = 0;
 
@@ -119,7 +121,7 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 		/*if (!sentence1printed)
 		{
 
-			printTextCbyC(sentence,n);
+			printOutNintendoStyle(sentence,n);
 
 		}
 		else {
@@ -133,11 +135,12 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 			switch (scene) {
 
 			case 0:
-				printTextCbyC("FIGHT!", n);
+				//printOutNintendoStyle("FIGHT!", n);
+				printOutNintendoStyle("Lets see what you are made of Bashy...",n);
 				enough = false;
 				break;
 			case 1:
-				if (hitnumber < 7) {
+				if (hitnumber < 4) {
 					SpawnEnemies(3);
 				}
 				else {
@@ -150,7 +153,7 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 			case 2:
 				if (hitnumber<5) {
 					if (enemy3clock.getElapsedTime().asSeconds() > 1) {
-						enemy3List.push_back(new Enemy3(&Enemy3Texture, sf::Vector2u(1, 1), Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1400.0f));
+						enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1400.0f));
 						enemy3clock.restart();
 					}
 				}
@@ -164,14 +167,14 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 
 				if (!enough) {
 
-					enemy1List.push_back(new Enemy2(&BossTexture, sf::Vector2u(1, 1), font, 150.0f, true));
+					enemy1List.push_back(new Enemy2(&BossTexture, sf::Vector2u(1, 1), font, 220.0f, true));
 					
 					enough = true;
 				}
 				SpawnEnemies(7);
 				if (hitnumber < 1000) {
 					if (enemy3clock.getElapsedTime().asSeconds() > 3) {
-						enemy3List.push_back(new Enemy3(&Enemy3Texture, sf::Vector2u(1, 1), Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1400.0f));
+						enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1500.0f));
 						enemy3clock.restart();
 					}
 				}

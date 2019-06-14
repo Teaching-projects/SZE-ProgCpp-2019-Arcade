@@ -7,6 +7,7 @@ Collider::Collider(sf::RectangleShape& body)
 
 }
 
+
 bool Collider::CheckCollision(Collider other) //,float push Téglalapok összehasonlitasa
 {
 

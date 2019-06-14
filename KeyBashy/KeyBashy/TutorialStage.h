@@ -23,6 +23,8 @@ public:
 
 	void printTextCbyC(std::string String,int& n);
 
+	void printOutNintendoStyle(std::string message, int& n);
+
 	sf::Texture Enemy2Texture;
 	sf::Texture Enemy1Texture;
 	sf::Texture Enemy3Texture;
@@ -45,6 +47,6 @@ private:
 	float deltaTime;
 
 	sf::Clock clock;
-
+	sf::Clock messageClock;
 };
 

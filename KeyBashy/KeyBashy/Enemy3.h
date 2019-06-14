@@ -13,28 +13,25 @@ class Enemy3
 {
 
 public:
-	//virtual ~Enemy2() = default;
 
-	//Enemy3(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, sf::Font& font, float speed);
-
-	Enemy3(sf::Texture* Enemy2Texture, sf::Vector2u imageCount, float x, float y, float speed);
+	Enemy3(sf::Texture& Enemy3Texture, float x, float y, float speed);
 
 	void Update(float uTime, sf::Font &font);
 
-	Collider GetCollider() { return Collider(body); }
+	Collider GetCollider() { return Collider(sprite); }
 
 	void Draw(sf::RenderWindow& window);
 	Drawable state;
 
 private:
 
+	sf::Sprite sprite;
 	float x;
 	float y;
-	
+	bool left;
 	float speed;
-	sf::RectangleShape body;
+	//sf::RectangleShape body;
 	unsigned int row;
-	Animation animation;
 
 };
 
