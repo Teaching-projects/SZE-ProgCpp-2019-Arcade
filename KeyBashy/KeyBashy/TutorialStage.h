@@ -28,6 +28,7 @@ public:
 	sf::Texture Enemy2Texture;
 	sf::Texture Enemy1Texture;
 	sf::Texture Enemy3Texture;
+	sf::Texture Enemy3LeftTexture;
 private:
 	
 	sf::String playerInput; //

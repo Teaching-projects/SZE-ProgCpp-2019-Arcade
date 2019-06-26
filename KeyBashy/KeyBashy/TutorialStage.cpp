@@ -13,6 +13,7 @@ TutorialStage::TutorialStage() {
 	Enemy1Texture.loadFromFile("SpriteSheets/enemy1.png");
 	Enemy2Texture.loadFromFile("SpriteSheets/enemy2.png");
 	Enemy3Texture.loadFromFile("SpriteSheets/rocket.png");
+	Enemy3LeftTexture.loadFromFile("SpriteSheets/rocketleft.png");
 
 	font.loadFromFile("cmd.ttf");
 	playerText.setFont(font);
@@ -62,6 +63,8 @@ int TutorialStage::checkEnemyList(sf::Event& event, BashyTerminal& Bashy) {
 }
 
 int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
+
+	
 
 	actualMessage.setFont(font);
 	actualMessage.setFillColor(sf::Color::White);
@@ -156,7 +159,7 @@ int TutorialStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 			case 9:
 				
 				if (!enough) {
-					enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1250.0f));
+					enemy3List.push_back(new Enemy3(&Enemy3Texture,&Enemy3LeftTexture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1250.0f));
 					enough = true;
 				}
 				break;

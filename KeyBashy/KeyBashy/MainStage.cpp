@@ -34,6 +34,7 @@ MainStage::MainStage() {
 	Enemy2Texture.loadFromFile("SpriteSheets/enemy2.png");
 	Enemy3Texture.loadFromFile("SpriteSheets/rocket.png");
 	BossTexture.loadFromFile("SpriteSheets/boss.png");
+	Enemy3LeftTexture.loadFromFile("SpriteSheets/rocketleft.png");
 
 	font.loadFromFile("cmd.ttf");
 	playerText.setFont(font);
@@ -153,7 +154,7 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 			case 2:
 				if (hitnumber<5) {
 					if (enemy3clock.getElapsedTime().asSeconds() > 1) {
-						enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1400.0f));
+						enemy3List.push_back(new Enemy3(&Enemy3Texture, &Enemy3LeftTexture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1400.0f));
 						enemy3clock.restart();
 					}
 				}
@@ -174,7 +175,7 @@ int MainStage::Start(sf::RenderWindow& window, BashyTerminal& Bashy) {
 				SpawnEnemies(7);
 				if (hitnumber < 1000) {
 					if (enemy3clock.getElapsedTime().asSeconds() > 3) {
-						enemy3List.push_back(new Enemy3(Enemy3Texture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1500.0f));
+						enemy3List.push_back(new Enemy3(&Enemy3Texture, &Enemy3LeftTexture, Bashy.body.getPosition().x, Bashy.body.getPosition().y, 1500.0f));
 						enemy3clock.restart();
 					}
 				}

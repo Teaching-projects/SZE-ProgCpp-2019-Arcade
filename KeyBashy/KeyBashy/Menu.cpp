@@ -5,7 +5,7 @@ Menu::Menu(float width, float height) {
 
 	selected = 1;
 
-	if (!font.loadFromFile("arial.ttf")) {
+	if (!font.loadFromFile("cmd.ttf")) {
 
 	}
 

@@ -30,6 +30,7 @@ public: bool GameOver;
 		sf::Texture Enemy1Texture;
 		sf::Texture Enemy3Texture;
 		sf::Texture BossTexture;
+		sf::Texture Enemy3LeftTexture;
 
 		void printOutNintendoStyle(std::string message, int& n);
 
